@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+/***********************
+Bootstrap Size Guide 
+XL >= 1200px          
+LG >= 992px           
+MD >= 768px           
+SM >= 576px           
+XS < 576px            
+************************/
+:root {
+    --breakpoint-xl: 1200px;
+    --breakpoint-lg: 992px;
+    --breakpoint-md: 768px;
+    --breakpoint-sm: 576px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(5, 30, 5);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#app {
+    display: flex;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+#app .main {
+    min-width: fit-content;
+    max-width: var(--breakpoint-md);
+    width: var(--breakpoint-md);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: rgb(218, 218, 218);
+    box-shadow: 2px 2px 1.6rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calendar {
+    padding: 0rem 1rem;
+    margin: 1rem 0rem;
+    width: 100%;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.calendar .date {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.salah-times {
+    padding: 0rem 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+
+.salah {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    padding: 2rem;
+    border-bottom: 1px solid black;
+}
+
+.salah:last-child {
+    border-bottom: none;
+}
+
+@media all and (max-width: 768px) {
+    #app {
+        width: 100vw;
+    }
+    #app .main {
+        border-radius: 0;
+        width: 100%;
+    }
 }
