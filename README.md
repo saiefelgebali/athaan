@@ -1,3 +1,8 @@
 # athaan
 
-A simple Salah time tracker that uses **React JS** with the [Al Adhan API](https://aladhan.com/)
+A simple prayer time tracker.
+Uses the [Al Adhan API](https://aladhan.com/), to fetch location-based data and display them on screen.
+
+## Setup
+- Go into the `athaan` directory
+- Run `npm start` to run the project locally
